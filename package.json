@@ -1,0 +1,9 @@
+{
+  "amd": {},
+  "volo": {
+    "baseUrl": "www/js/lib",
+    "dependencies": {
+      "jade": "github:visionmedia/jade/0.31.2"
+    }
+  }
+}

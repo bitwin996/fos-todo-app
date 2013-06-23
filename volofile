@@ -1,0 +1,26 @@
+/*jslint node: true */
+'use strict';
+
+module.exports = {
+    jade: {
+        summary: 'Compile .jade file into .html',
+        //run: 'n.jade src/*.jade -o www'
+        run: 'n.jade src/index.jade -o www'
+    },
+
+    build: {
+        flags: {
+            //Does not print the build output.
+            'q': 'quiet'
+        },
+
+        run: function (d, v, namedArgs) {
+            //Remove the old dir
+            v.rm('www-built');
+
+            d.resolve(v.spawn('node', ['tools/r.js', '-o', 'tools/build.js'], {
+                useConsole: !namedArgs.quiet
+            }));
+        }
+    }
+};

@@ -1,0 +1,60 @@
+!!! 5
+html
+  head
+    //meta(charset="utf-8")
+    meta(name="viewport", content="width=device-withd, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="css/app.css")
+    script(defer, src="js/lib/require.js")
+
+  body(role="application")
+    section#view-todos(role="region")
+      header
+        h1 Todos
+
+      article.view-content
+        ul#todo-list.todo-list.reset-list(role="list")
+          li(role="listitem")
+            label
+              input(type="checkbox")
+              span My task 1
+
+            input(type="text", aria-hidden="true"))
+            button.btn.edit
+              span Edit
+
+          li(role="listitem")
+            label
+              input(type="checkbox")
+              span My task 2
+
+            input(type="text", aria-hidden="true"))
+            button.btn.edit
+              span Edit
+
+      footer
+        menu(role="toolbar")
+          button.btn.add(role="menuitem")
+            span Add
+          button.btn.del(role="menuitem", desabled)
+            span Delete
+
+    section#view-add(role="region", aria-hidden="true")
+      header
+        h1 [+] Todo
+
+      section.view-content
+        .wrapper
+          menu.options
+            ul#activities.reset-list(role="list")
+              li(role="listitem")
+                a.add-contact(href="#")
+                  label(for="task") [Insert Contact]
+          form(aria-owns="btn-add-done")
+            input#task(type="text", name="task", required)
+
+      footer
+        menu(role="toolbar")
+          button#btn-add-done.btn.done(role="menuitem", disabled)
+            span Done
+          button.btn.del(role="menuitem")
+            span Cancel

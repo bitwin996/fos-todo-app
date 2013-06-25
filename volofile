@@ -3,9 +3,21 @@
 
 module.exports = {
     jade: {
-        summary: 'Compile .jade file into .html',
+        summary: 'Compile .jade files into .html',
         //run: 'n.jade src/*.jade -o www'
         run: 'n.jade src/index.jade -o www'
+    },
+
+    stylus: {
+        summary: 'Compile .less files into .css',
+        run: [
+          'n.stylus src/stylus/element.styl -o www/css',
+          'n.stylus src/stylus/view-specific.styl -o www/css',
+          'n.stylus src/stylus/module.styl -o www/css',
+          'n.stylus src/stylus/button.styl -o www/css',
+          'n.stylus src/stylus/todo-list.styl -o www/css',
+          'n.stylus src/stylus/utility.styl -o www/css'
+        ]
     },
 
     build: {

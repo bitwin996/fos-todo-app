@@ -1,0 +1,34 @@
+.todo-list > li
+  border-bottom 1px solid rgba(255,255,255,.1)
+  position relative
+
+.todo-list > li > .btn
+  top 0
+  right 0
+  position absolute
+  height 3.9rem
+
+.todo-list label
+  border-bottom 1px solid rgba(0, 0, 0, 0.1)
+  display block
+  padding 1rem 2.8rem 1rem 1rem
+
+.todo-list > li:last-child,
+.todo-list > li:last-child > label
+  border-bottom none
+
+.todo-list label > span
+  transition all .5s
+ 
+/***
+  This selector is interesting. It creates a line-through and
+  decrease opacity of text in span when checkbox is checked
+***/
+.todo-list input[type=checkbox]:checked + span
+  text-decoration line-through
+  opacity .4
+ 
+.todo-list > li > input[type=text]
+  margin .4rem
+  /* removing input padding and margin from 100% */
+  width calc(100% - 2.3rem)

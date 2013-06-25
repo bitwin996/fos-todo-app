@@ -3,7 +3,8 @@
   "volo": {
     "baseUrl": "www/js/lib",
     "dependencies": {
-      "jade": "github:visionmedia/jade/0.31.2"
+      "jade": "github:visionmedia/jade/0.31.2",
+      "stylus": "github:LearnBoost/stylus/0.32.1"
     }
   }
 }

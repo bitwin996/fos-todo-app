@@ -2,6 +2,7 @@ www-built
 www-ghpages
 
 www/js/lib/*
+www/css/*
 *.html
 
 *.swp
